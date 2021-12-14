@@ -6,13 +6,40 @@ For this assignment, you will submit a high-level outline of your project. This 
 
 ## Submission Instructions
 
+
 ### Overview
-Include overview here
+
+     We stride to bring families and friends together closer through
+puzzles, laughs and adventures. Through puzzles, board games, and card games
+families can share which ones they did or didnt enjoy. View which games are 
+being played currently or Top-Selling. 
+     We provide information on these board games, card games, and puzzles. How to
+play the game, how much the game is, reviews on the game, and much more.
+We also allow users to add their own "House rules", view games, search and
+sort games by genre, feature, difficulty, keyword, tags, and themes.
+
 ### Features
-Include Features here
+
+-Search : Find games by Name, Keyword, Tags, Manufacturer, and Genre.
+
+-User Login : Allow users to submit reviews, ratings, and 'House rules'.
+
+-Featured Page : A page showing recently played games by our users, recently purchased, and more.
+
+-Create, Modify, and Destroy : Users can submit new games to be add, changed when updates may occur, delete rules instructions.
+
 ### Technologies
-Include Technologies here
+
+- Java
+- Spring Boot
+- MySQL
+- Hibernate
+- Thymeleaf templates
+
 ### What I'll Have to Learn
-Include what you will need to learn here
+
+ Include what you will need to learn here
+
 ### Project Tracker
-Link to your Trello board here
+
+https://trello.com/b/34OptNhR/board-game-project
