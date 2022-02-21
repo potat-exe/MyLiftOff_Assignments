@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/" >
+<head th:replace="fragments :: head">
+</head>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+    <ul>
+        <li th:each="game : ${games}">
+            <a th:href="@{'/view/' + ${game.id}}" th:text="${game.name}"></a>
+        </li>
+    </ul>
+
+</div>
+
+<h1> <link th:href="@{/css/homepage.css}" rel="stylesheet" />
+    <title>Board Game Emporium</title>
+     <b>Board Game Emporium</b>
+</h1>
+<p>
+We stride to bring families and friends together closer
+through puzzles, laughs and adventures. Through puzzles, board games, and card games
+families can share which ones they did or didn't enjoy. View which games are
+being played currently or Top-Selling.
+
+We provide information on these board games, card games, and puzzles. How to
+play the game, how much the game is, reviews on the game, and much more.
+We also allow users to add their own "House rules", view games, search and
+sort games by genre, feature, difficulty, keyword, tags, and themes.
+</p>
+</html>

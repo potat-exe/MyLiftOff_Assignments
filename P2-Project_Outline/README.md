@@ -9,8 +9,8 @@ For this assignment, you will submit a high-level outline of your project. This 
 
 ### Overview
 
-     We stride to bring families and friends together closer through
-puzzles, laughs and adventures. Through puzzles, board games, and card games
+     We stride to bring families and friends together closer 
+through puzzles, laughs and adventures. Through puzzles, board games, and card games
 families can share which ones they did or didnt enjoy. View which games are 
 being played currently or Top-Selling. 
      We provide information on these board games, card games, and puzzles. How to
@@ -38,7 +38,12 @@ sort games by genre, feature, difficulty, keyword, tags, and themes.
 
 ### What I'll Have to Learn
 
- Include what you will need to learn here
+ How to utilize and create authorization and login.
+ How to allow users to create basic pages 
+ Understanding of MVC projects
+ How to use different api's
+how to implement and utilize a search bar
+
 
 ### Project Tracker
 

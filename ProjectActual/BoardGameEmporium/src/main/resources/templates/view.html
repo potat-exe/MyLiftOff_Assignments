@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<link th:href="@{/css/background.css}" rel="stylesheet" />
+
+<body class="container  body-content">
+<h1 th:text="${'Game: ' + game.name}">Default Title</h1>
+
+<nav th:replace="fragments :: page-header"></nav>
+
+<div class="game-listing">
+    <p th:text="${'ID: ' + game.id}"></p>
+    <p th:text="${'Name: ' + game.name}"></p>
+    <!-- <p>
+        Employer: <a th:href="@{'/employers/view/' + ${job.employer.id}}" th:text="${job.employer.name}"></a>
+    </p>
+    <p> Skills:
+    <ul>
+        <li th:each="skill : ${job.skills}">
+            <a th:href="@{'/skills/view/' + ${skill.id}}" th:text="${skill.name}"></a>
+        </li>
+    </ul>
+    </p> -->
+</div>
+
+
+</body>
+</html>
