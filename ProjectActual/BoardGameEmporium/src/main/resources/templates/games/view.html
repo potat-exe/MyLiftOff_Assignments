@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<link th:href="@{/css/background.css}" rel="stylesheet" />
+
+<body class="container  body-content">
+<h1 th:text="${game.name}">Default Title</h1>
+
+<nav th:replace="fragments :: page-header"></nav>
+
+<div class="game-listing">
+    <p th:text="${ game.name}"></p>
+   <!-- <p th:text="${'Description: ' + game.description}"></p> -->
+
+</div>

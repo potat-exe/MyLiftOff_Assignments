@@ -33,7 +33,7 @@ public class SearchController {
             games = GameData.findByColumnAndValue(searchType, searchTerm, gameRepository.findAll());
         }
         model.addAttribute("columns", columnChoices);
-        model.addAttribute("title", "Games with " + columnChoices.get(searchType) + ": " + searchTerm);
+        model.addAttribute("title", "Games with : " + searchTerm);
         model.addAttribute("games", games);
 
         return "search";

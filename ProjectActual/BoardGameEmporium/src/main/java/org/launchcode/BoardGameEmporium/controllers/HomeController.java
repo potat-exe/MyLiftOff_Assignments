@@ -9,6 +9,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Optional;
 
 @Controller
 public class HomeController {
@@ -47,8 +48,16 @@ public class HomeController {
     @GetMapping("view/{gameId}")
     public String displayViewGame(Model model, @PathVariable int gameId){
 
-        //gameRepository.findById();
+        Optional optGame = gameRepository.findById(gameId);
+        if (optGame.isPresent()) {
+            Game game = (Game) optGame.get();
+            model.addAttribute("game", game);
+            return "games/view"; }
+        else{
+                return "redirect:../";
+            }
+        }
 
-        return "view";
+
     }
-}
+
