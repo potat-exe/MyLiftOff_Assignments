@@ -42,7 +42,10 @@ sort games by genre, feature, difficulty, keyword, tags, and themes.
  How to allow users to create basic pages 
  Understanding of MVC projects
  How to use different api's
-how to implement and utilize a search bar
+ how to implement and utilize a search bar
+ refine skills on html, java, sql and database
+ 
+
 
 
 ### Project Tracker
