@@ -9,7 +9,21 @@
 <nav th:replace="fragments :: page-header"></nav>
 
 <div class="game-listing">
-    <p th:text="${ game.name}"></p>
-   <!-- <p th:text="${'Description: ' + game.description}"></p> -->
+    <p th:text="${game.description}"></p>
+    <table>
+    <tr>
+     <th>Game Name</th>
+     <th><p th:text="${game.name}"></p></th>
+    </tr>
+    <tr>
+     <th>Game Id</th>
+     <th><p th:text="${game.id}"></p></th>
+    </tr>
+    <tr>
+     <th>Game Type</th>
+     <th><p th:text="${game.type}"></p></th>
+    </tr>
+    </table>
+
 
 </div>

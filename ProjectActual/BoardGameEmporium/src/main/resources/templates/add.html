@@ -15,24 +15,21 @@
         <span th:errors="${game.name}" class="error"></span>
     </div>
 
-   <!-- <div class="form-group">
-        <label th:for="employer">Employer</label>
-        <select name="employerId">
-            <option th:each="employer : ${employers}"
-                    th:text="${employer.name}"
-                    th:value="${employer.id}"></option>
-        </select>
-        <a th:href="@{'/employers/add'}">Add Employers</a>
+    <div class="form-group">
+        <label th:for="description">Game Description</label>
+        <input class="form-control" th:field="${game.description}" size="100px">
+        <span th:errors="${game.description}" class="error"></span>
     </div>
 
     <div class="form-group">
-        <label th:for="skills">Skills</label>
-        <th:block th:each="skill : ${skills}">
-            <input type="checkbox" name="skills" th:value="${skill.id}">
-            <label th:text="${skill.name}"></label>
-        </th:block>
-        <a th:href="@{'/skills/add'}">Add Skills</a>
-    </div> -->
+        <label th:for="type">Game Type</label>
+            <select type="checkbox" name="type">
+                <option value="board">Board Game</option>
+                <option value="card">Card Game</option>
+                <option value="dice">Dice Game</option>
+            </select>
+    </div>
+
 
     <input type="submit" value="Add Game" />
 </form>

@@ -3,6 +3,7 @@ package org.launchcode.BoardGameEmporium.models;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -18,6 +19,20 @@ public class AbstractEntity {
     @NotBlank
     @Size(max = 200)
     private String name;
+
+    @Size(max = 4000)
+    private String description;
+
+
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public int getId() {
         return id;
@@ -48,4 +63,11 @@ public class AbstractEntity {
         return Objects.hash(id);
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
