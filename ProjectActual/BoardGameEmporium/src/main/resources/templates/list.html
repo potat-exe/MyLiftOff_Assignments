@@ -22,9 +22,20 @@
         </td>
         <td>
            <li>
-                <a th:href="@{/list/card(column='type',value='card')}">Card Games</a>
+                <a th:href="@{/list/games(column='card',value='card')}">Card Games</a>
             </li>
         </td>
+        <td>
+            <li>
+                <a th:href="@{/list/games(column='board',value='board')}">Board Games</a>
+            </li>
+        </td>
+        <td>
+            <li>
+                <a th:href="@{/list/games(column='dice',value='dice')}">Dice Games</a>
+            </li>
+        </td>
+
         <!-- <td>
              <li th:each="skill : ${skills}">
                  <a th:href="@{/list/jobs(column=skill,value=${skill.name})}" th:text="${skill.name}"></a>

@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.lang.reflect.Field;
 import java.util.HashMap;
 
 @Controller
@@ -24,6 +25,9 @@ public class ListController {
     public ListController () {
 
         columnChoices.put("all","All");
+        columnChoices.put("dice","Dice");
+        columnChoices.put("board","Board");
+        columnChoices.put("card","Card");
 
     }
 
@@ -39,13 +43,37 @@ public class ListController {
         if (column.toLowerCase().equals("all")) {
             games = gameRepository.findAll();
             model.addAttribute("title", "All Games");
-        } else {
+        }else if(column.toLowerCase().equals("card")){
+            games = GameData.findByGameType(column, value, gameRepository.findAll());
+            model.addAttribute("title", "Games with " + columnChoices.get(column) );
+        }else if(column.toLowerCase().equals("board")){
+            games = GameData.findByGameType(column, value, gameRepository.findAll());
+            model.addAttribute("title", "Games with " + columnChoices.get(column) );
+        }else if(column.toLowerCase().equals("dice")){
+            games = GameData.findByGameType(column, value, gameRepository.findAll());
+            model.addAttribute("title", "Games with " + columnChoices.get(column) );
+        }else {
             games = GameData.findByColumnAndValue(column, value, gameRepository.findAll());
-            model.addAttribute("title", "Games with " + columnChoices.get(column) + ": " + value);
+            model.addAttribute("title", "Games with " + columnChoices.get(column) );
         }
         model.addAttribute("games", games);
 
 
         return "list-games";
     }
+
+//    @RequestMapping(value = "type")
+//    public String listGamesByType(Model model, @RequestParam String column, @RequestParam String value) {
+//        Iterable<Game> games;
+//
+//            games = GameData.findByGameType(column, value, gameRepository.findAll());
+//            model.addAttribute("title", "Games with " + columnChoices.get(column) + ": " + value);
+//
+//
+//
+//        model.addAttribute("games", games);
+//
+//
+//        return "list-card";
+//    }
 }

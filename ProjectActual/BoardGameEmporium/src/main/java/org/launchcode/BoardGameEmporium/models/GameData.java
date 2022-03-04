@@ -30,6 +30,40 @@ public class GameData {
         return results;
     }
 
+    public static ArrayList<Game> findByGameType( String column, String value, Iterable<Game> allGames){
+
+        ArrayList<Game> results = new ArrayList<>();
+
+        if(value.toLowerCase().equals("card")){
+            for (Game game : allGames) {
+                if(game.getType() != null && game.getType().toLowerCase().equals("card") ){
+                    results.add(game);
+                }
+            }
+        }
+        if(value.toLowerCase().equals("board") ){
+            for (Game game : allGames) {
+                if(game.getType() != null && game.getType().toLowerCase().equals("board") ){
+                    results.add(game);
+                }
+            }
+        }
+        if( value.toLowerCase().equals("dice") ){
+            for (Game game : allGames) {
+                if(game.getType() != null && game.getType().toLowerCase().equals("dice") ){ //use . notation to compare strings == for other variables
+                    results.add(game);
+
+                }
+            }
+
+        }
+
+
+
+
+        return results;
+    }
+
     public static String getFieldValue(Game game, String fieldName){
         String theValue = "";
         if (fieldName.equals("name")){
